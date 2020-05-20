@@ -41,3 +41,13 @@ def softmax(x):
 
     assert x.shape == orig_shape
     return x
+
+
+def get_occ_list(liste):
+    set_from_list = set(liste)
+    occ = [liste.count(x) for x in set_from_list]
+    return list(set_from_list), occ
+
+
+def get_indexes_from_values(liste, values):
+    return [liste.index(values[i]) for i in range(len(values))]
